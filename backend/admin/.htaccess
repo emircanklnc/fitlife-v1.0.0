@@ -1,0 +1,14 @@
+# PHP'yi .html dosyalarında çalıştır
+<IfModule mod_php7.c>
+    AddType application/x-httpd-php .html
+</IfModule>
+
+<IfModule mod_php8.c>
+    AddType application/x-httpd-php .html
+</IfModule>
+
+# Eğer mod_php yoksa, handler kullan
+<IfModule mod_mime.c>
+    AddHandler application/x-httpd-php .html
+</IfModule>
+
